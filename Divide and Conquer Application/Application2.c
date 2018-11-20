@@ -69,7 +69,7 @@ int main(){
 	int high=n-1,low=0,mid=(low+high)/2;
 	printf("\nEnter the sum\n");
 	scanf("%d",&s);
-  int newkey;
+  	int newkey;
 	for(i=0;i<n;i++){
 		high=n-1;
 		low=0;
