@@ -91,7 +91,7 @@ Example-1
 a-b-c-d-e-f-g
 
 Example-2
-10 nodes
+10 nodes (Disconnected Graph)
 0 0 1 1 1 0 0 0 0 0
 0 0 0 0 1 1 0 0 0 0
 1 0 0 1 0 1 0 0 0 0
