@@ -110,7 +110,7 @@ Enter the elements:
 Enter the sum
 -1
 
-Triple doesn't exist for the given sum
+Triplet doesn't exist for the given sum
 
 Example-3
 Enter the size of array:
