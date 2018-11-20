@@ -1,3 +1,4 @@
+//O(log n)
 #include <stdio.h>
 
 int binarySearch(int a[], int length)
