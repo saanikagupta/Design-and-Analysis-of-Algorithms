@@ -82,7 +82,7 @@ int main(){
         	}
     	}
     	if(flag==0)
-    		printf("\nTriple doesn't exist for the given sum");
+    		printf("\nTriplet doesn't exist for the given sum");
 	return 0;
 }
 
@@ -122,6 +122,6 @@ Enter the elements:
 Enter the sum
 1
 
-Triple doesn't exist for the given sum
+Triplet doesn't exist for the given sum
 
 */
