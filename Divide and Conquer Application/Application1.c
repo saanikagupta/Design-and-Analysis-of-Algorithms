@@ -63,26 +63,26 @@ int main(){
 	}
 	mergeSort(a,0,n-1);
 	int sum;
-    printf("\nEnter the sum\n");
-    scanf("%d",&sum);
-    int l, r;
-    for (i=0;i<n-2;i++){
-        l=i+1;
- 	r=n-1;
-        while(l<r){
-            if(a[i]+a[l]+a[r]==sum) {
-                printf("Triplet is %d, %d, %d", a[i],a[l], a[r]);
-                flag=2;
-                break;
-            }
-            else if(a[i]+a[l]+a[r]<sum)
-                l++;
-            else
-                r--;
-        }
-    }
-    if(flag==0)
-    	printf("\nTriple doesn't exist for the given sum");
+	printf("\nEnter the sum\n");
+	scanf("%d",&sum);
+	int l, r;
+    	for (i=0;i<n-2;i++){
+        	l=i+1;
+ 		r=n-1;
+        	while(l<r){
+            		if(a[i]+a[l]+a[r]==sum) {
+                		printf("Triplet is %d, %d, %d", a[i],a[l], a[r]);
+                		flag=2;
+                		break;
+            		}
+            		else if(a[i]+a[l]+a[r]<sum)
+                		l++;
+            		else
+                		r--;
+        	}
+    	}
+    	if(flag==0)
+    		printf("\nTriple doesn't exist for the given sum");
 	return 0;
 }
 
