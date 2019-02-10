@@ -13,8 +13,7 @@ void create_root(node *root){
 	root = NULL;
 }
 
-int height(node* v)  
-{ 
+int height(node* v){ 
    if(v == NULL)  
        return 0; 
    else{
