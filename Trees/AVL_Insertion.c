@@ -18,11 +18,11 @@ int height(node* v)
    if(v == NULL)  
        return 0; 
    else{
-   		int leftHeight = height(v -> left); 
+   	int leftHeight = height(v -> left); 
        	int rightHeight = height(v -> right); 
   
         if (leftHeight > rightHeight)  
-           return(leftHeight + 1); 
+            return(leftHeight + 1); 
        	else return(rightHeight + 1); 
    } 
 }
