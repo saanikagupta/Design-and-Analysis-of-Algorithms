@@ -52,16 +52,14 @@ int count_nodes(node *root)
 
 // Deleting a node
 
-node* inorder_successor(node* root) 
-{ 
+node* inorder_successor(node* root){ 
     node* cur = root; 
     while (cur -> left != NULL) 
         cur = cur -> left;  
     return cur; 
 }
 
-node* deleteNode(node* root, int key) 
-{ 
+node* deleteNode(node* root, int key){ 
     if (root == NULL){ 
     	printf("Value not found!");
     	return NULL;
@@ -70,8 +68,7 @@ node* deleteNode(node* root, int key)
         root -> left = deleteNode(root -> left, key); 
     else if (key > root -> data) 
         root -> right = deleteNode(root -> right, key); 
-    else
-    { 
+    else{ 
         if (root -> left == NULL){
             node *temp = root -> right; 
             free(root);
