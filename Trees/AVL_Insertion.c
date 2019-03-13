@@ -55,19 +55,13 @@ int BalanceFactor(node *v){
 	return height(v -> left) - height(v -> right);
 }
 // inserting nodes
-node* insert(node *root, int val){
-	node *ptr;
-	ptr = (node*)malloc(sizeof(node));
-	ptr -> data = val;
-	ptr -> left = NULL;
-	ptr -> right = NULL;
-	ptr -> height = 1;
+node* insert(node *root, node *ptr){
 	if(root == NULL)
 		return(ptr);
-	if(val < root -> data)
-		root -> left = insert(root -> left, val);
-	else if(val > root -> data)
-		root -> right = insert(root -> right, val);
+	if(ptr -> data < root -> data)
+		root -> left = insert(root -> left, ptr);
+	else if(ptr -> data > root -> data)
+		root -> right = insert(root -> right, ptr);
 	else
 		return root;
 
@@ -75,21 +69,21 @@ node* insert(node *root, int val){
 	int balance = BalanceFactor(root);
 
 	// RR rotation
-	if(balance > 1 && val < root -> left -> data)
+	if(balance > 1 && ptr -> data < root -> left -> data)
 		return rightRotate(root);
 
 	// LL rotation
-	if(balance < -1 && val > root -> right -> data)
+	if(balance < -1 && ptr -> data > root -> right -> data)
 		return leftRotate(root);
 
 	// LR rotation
-	if(balance > 1 && val > root -> left -> data){
+	if(balance > 1 && ptr -> data > root -> left -> data){
 		root -> left = leftRotate(root -> left);
 		return rightRotate(root);
 	}
 
 	// RL rotation
-	if(balance < -1 && val < root -> right -> data){
+	if(balance < -1 && ptr -> data < root -> right -> data){
 		root -> right = rightRotate(root -> right);
 		return leftRotate(root);
 	}
@@ -117,7 +111,13 @@ void main(){
 			printf("\nEnter the value of new node:\t");
 			size++;
 			scanf("%d", &val);
-			root = insert(root, val);
+			node *ptr;
+			ptr = (node*)malloc(sizeof(node));
+			ptr -> data = val;
+			ptr -> left = NULL;
+			ptr -> right = NULL;
+			ptr -> height = 1;
+			root = insert(root, ptr);
 			break;
 		}
 		case 2:
