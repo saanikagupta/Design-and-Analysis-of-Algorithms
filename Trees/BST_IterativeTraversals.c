@@ -79,7 +79,7 @@ void iterative_postorder(node *root){
 
 void iterative_inorder(node *root){
 	if(root != NULL){
-		int top = -1, ovr = 0;;
+		int top = -1, ovr = 0;
 		node *cur = root;
 		node** stack = (node**)malloc(size * sizeof(node*));
 		while(ovr == 0){
